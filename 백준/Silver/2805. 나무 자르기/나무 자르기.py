@@ -2,7 +2,7 @@ import sys
 
 n, m = map(int, input().split())
 
-trees = [int(c) for c in sys.stdin.readline().split()]
+trees = list(map(int, sys.stdin.readline().split()))
 
 start, end = 1, max(trees)
 result = 0
