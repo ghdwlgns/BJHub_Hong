@@ -10,10 +10,10 @@ result = 0
 while start <= end:
     mid = (start + end) // 2
 
-    h = sum((cut := t - mid) if t - mid > 0 else 0 for t in trees)
+    h = sum(max(0, t - mid) for t in trees)
     
     if h >= m:
-        result = max(mid, result)
+        result = mid
         start = mid + 1
     else:
         end = mid - 1
